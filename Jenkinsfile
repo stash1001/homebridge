@@ -27,10 +27,5 @@ pipeline {
         }
       }
     }
-    stage('Clean up docker') {
-      steps{
-        sh label: '', script: ' docker rm -f alpr_alpr-api_pipeline$BUILD_NUMBER'
-      }
-    }
   }
 }
