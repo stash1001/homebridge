@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = "stash1001/stash1001/homebridge"
+    registry = "stash1001/homebridge"
     registryCredential = '22f8c8c3-9914-4222-9b9c-9f44267a05f3'
     dockerImage = ''
   }
@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-        git credentialsId: 'a75d2253-13b4-4d48-9dcd-69b4218bb550', url: 'git@github.com:stash1001/stash1001/homebridge.git'
+        git credentialsId: 'a75d2253-13b4-4d48-9dcd-69b4218bb550', url: 'git@github.com:stash1001/homebridge.git'
       }
     }
     stage('Building image') {
